@@ -1,0 +1,121 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.modal {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-actions button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3f51b5;
+    color: white;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #aaa;
+}
+
+.assign-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.smart-assign-btn {
+    padding: 6px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.conflict-warning {
+    background-color: #fff0f0;
+    border: 1px solid #ff5c5c;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.conflict-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.conflict-version {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.conflict-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.overwrite-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+}
+
+.merge-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+}
