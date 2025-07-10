@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import '../styles/RegisterPage.css'; // Adjust path if needed
+import '../styles/RegisterPage.css';
 
 const RegisterPage = () => {
     const [form, setForm] = useState({ name: '', email: '', password: '' });
