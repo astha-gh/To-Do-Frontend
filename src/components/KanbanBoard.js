@@ -63,7 +63,7 @@ const KanbanBoard = () => {
                 },
                 body: JSON.stringify(update),
             });
-            const data = await res.json();
+            await res.json();
         }
         catch (err) {
             console.error('Failed to update task status:', err);
