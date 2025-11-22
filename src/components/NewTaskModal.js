@@ -29,7 +29,7 @@ const NewTaskModal = ({ onClose, taskToEdit, allTasks }) => {
     }, [taskToEdit]);
 
     useEffect(() => {
-        fetch('http://localhost:8888/api/auth/users')
+        fetch('https://to-do-backend-1-ihwt.onrender.com/api/auth/users')
             .then(res => res.json())
             .then(data => setUser(data))
             .catch(err => console.error('Failed to load users', err));
@@ -43,8 +43,8 @@ const NewTaskModal = ({ onClose, taskToEdit, allTasks }) => {
         e.preventDefault();
 
         const url = taskToEdit
-            ? `http://localhost:8888/api/tasks/${taskToEdit._id}`
-            : `http://localhost:8888/api/tasks`;
+            ? `https://to-do-backend-1-ihwt.onrender.com/api/tasks/${taskToEdit._id}`
+            : `https://to-do-backend-1-ihwt.onrender.com/api/tasks`;
 
         const method = taskToEdit ? 'PUT' : 'POST';
 
@@ -86,7 +86,7 @@ const NewTaskModal = ({ onClose, taskToEdit, allTasks }) => {
 
     const handleOverwrite = async () => {
         try {
-            const response = await fetch(`http://localhost:8888/api/tasks/${taskToEdit._id}`, {
+            const response = await fetch(`https://to-do-backend-1-ihwt.onrender.com/api/tasks/${taskToEdit._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const NewTaskModal = ({ onClose, taskToEdit, allTasks }) => {
                 isResolution: true
             };
 
-            const response = await fetch(`http://localhost:8888/api/tasks/${taskToEdit._id}`, {
+            const response = await fetch(`/${taskToEdit._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
